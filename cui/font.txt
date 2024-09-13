@@ -1,0 +1,2 @@
+pacman -S terminus-font
+sudo setfont /usr/share/kbd/consolefonts/ter-v32b.psf.gz
