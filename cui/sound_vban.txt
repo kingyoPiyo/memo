@@ -1,30 +1,27 @@
+# Expand cowspace
 mount -o remount,size=8G /run/archiso/cowspace
 
-#Sound test
+# Sound test
 speaker-test
 alsamixer
 
-
-#Package install
+# Package install
 pacman -S git automake make autoconf gcc jack
 
-
-#VBAN
+# Install VBAN tools
 git clone https://github.com/quiniouben/vban
-
 ./autogen.sh 
 ./configure --enable-alsa
 make
 make install
 
+# Run(e.g.)
 vban_receptor -i 192.168.37.19 -p 6980 -s Stream1
 
-
-#Mixer control
+# Mixer control
 alsamixer
 
-
-#Network monitor
+# Network monitor
 pacman -S bandwhich
 pacman -S vnstat
 
