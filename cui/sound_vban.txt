@@ -25,3 +25,6 @@ alsamixer
 pacman -S bandwhich
 pacman -S vnstat
 
+# Run with out root
+vim /etc/group
+audio:x:29: -> audio:x:29:username
