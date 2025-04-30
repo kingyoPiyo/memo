@@ -1,0 +1,2 @@
+# pacman -S glances
+# pacman -S openbsd-netcat
