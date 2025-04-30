@@ -1,0 +1,24 @@
+# Install GPSD 
+# pacman -S gpsd
+
+# Test run
+# cgps -s
+
+# Install ser2net
+# pacman -S ser2net
+
+
+# Edit ser2net.yaml
+# vim /etc/ser2net/ser2net.yaml
+
+connection: &GPS
+  accepter: tcp,6000
+  enable: on
+  options:
+    kickolduser: false
+    max-connections: 2
+    telnet-brk-on-sync: true
+  connector: serialdev,/dev/ttyUSB0,9600n81,local
+
+# Start ser2net
+# ser2net
