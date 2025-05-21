@@ -1,2 +1,14 @@
+############ Monitor
 # pacman -S glances
 # pacman -S openbsd-netcat
+
+############ WiFi
+# iwctl
+[iwd]# wsc list
+[iwd]# station <wlan-if> get-networks
+[iwd]# station <wlan-if> connect <AP-SSID>
+[iwd]# station <wlan-if> show
+[iwd]# quit
+
+
+
